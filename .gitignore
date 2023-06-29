@@ -1,0 +1,14 @@
+.vscode/
+*.txt
+/*/__pycache__/
+/*/*/__pycache__/
+*.env
+*.exe
+*.db
+*.json
+*.spec
+/dist/
+/build/
+*.csv
+*.spec
+/__pycache__/
