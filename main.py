@@ -4,7 +4,8 @@ from Pass_gen05 import pass_gen
 import pyperclip # py -m pip install pyperclip
 import sqlite3
 
-con = sqlite3.connect(r'D:\Documents\Python lessons\AngelaYu\day30-sqlite3\data_base.db')
+
+con = sqlite3.connect(r'data_base.db')
 cur = con.cursor()
 
 cur.execute('CREATE TABLE IF NOT EXISTS passwords(Website TEXT PRIMARY KEY, Address TEXT, Username TEXT, Password TEXT)')
@@ -114,7 +115,7 @@ window.title('Password Manager')
 window.config(padx=20, pady=20, bg='white')
 
 canvas = Canvas(width=200, height=200, bg='white', highlightthickness=0)
-lock_img = PhotoImage(file='./day29-passman/logo.png')
+lock_img = PhotoImage(file='logo.png')
 canvas.create_image(100, 100, image=lock_img)
 canvas.grid(column=1, row=0)
 
@@ -183,5 +184,3 @@ window.mainloop()
 
 cur.close()
 con.close()
-
-
